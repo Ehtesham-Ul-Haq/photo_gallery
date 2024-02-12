@@ -84,7 +84,7 @@ h1, h3 {
     grid-template-columns: repeat(6, 1fr); /* Three equal-width columns */
     gap: 10px; /* Gap between grid items */
     justify-content: center;
-    /* margin: 0 50px; */
+    margin: 0 50px;
 }
 
 
