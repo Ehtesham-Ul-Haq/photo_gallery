@@ -229,7 +229,7 @@ h1, h3 {
     }
 
     .category {
-        gap: 10px;
+        gap: 8px;
     }
     .gallery {
         grid-template-columns: repeat(2, 1fr);
@@ -255,7 +255,7 @@ h1, h3 {
   /* Mobile Phones (Landscape) */
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .gallery {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .logo {
         font-size:16px ;
