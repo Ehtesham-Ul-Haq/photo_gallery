@@ -16,6 +16,9 @@
             <div class="logo">
                 <h1>Photo Gallery<i class="fas fa-trademark"></i></h1>
             </div>
+            <div class="menu-icon">
+                <i class="fas fa-bars"></i>
+            </div>
             <div class="icons">
                 <div class="nav-item">
                     <a href="#home"><i class="fas fa-home"></i>Home</a>
@@ -169,5 +172,23 @@
         </footer>
     
     </main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuIcon = document.querySelector('.menu-icon');
+        const navItems = document.querySelector('.icons');
+    
+        menuIcon.addEventListener('click', function() {
+            // Toggle the visibility of navigation items
+            navItems.classList.toggle('show');
+
+            // Toggle between menu and remove icons
+            menuIcon.querySelector('i').classList.toggle('fa-bars');
+            menuIcon.querySelector('i').classList.toggle('fa-times');       
+         });
+    });
+
+</script>
+    
 </body>
 </html>

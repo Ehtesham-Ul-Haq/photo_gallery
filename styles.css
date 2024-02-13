@@ -49,6 +49,13 @@ body {
     transform: scale(1.2);
 }
 
+/* Menu icon styles */
+
+.menu-icon {
+    display: none; /* Initially hide for larger screens */
+}
+
+
 section {
     padding: 10px;
 }
@@ -98,7 +105,7 @@ h1, h3 {
 }
 
 .gallery-item img {
-    max-width: 185px;
+    width: 100%;
     height: 260px;
     transition: transform 0.3s ease;
     cursor: pointer;
@@ -161,3 +168,103 @@ h1, h3 {
     box-shadow: 0px 3px 10px rgba(0,0,0,.25);
     border-radius: 40px;
 }
+
+
+
+
+
+/* Tablets (Portrait and Landscape) */
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .logo h1 {
+        margin: 0px;
+    }
+    .footer-content {
+        display: block;
+        padding: 0 20px;
+    }  
+    .footer-social {
+        margin: 10px;
+    }
+}
+  
+
+  /* Mobile Phones (Portrait) */
+@media only screen  and (max-width: 767px) {
+    
+    .menu-icon {
+        display: block; /* Show for smaller screens */
+        margin-right: 20px;
+    }
+    .menu-icon i {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+    .icons {
+        display: none; /* Hide navigation items by default for smaller screens */
+    }
+    /* Show navigation items when the 'show' class is added */
+    .icons.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 20%;
+        left: 2%;
+        right: 2%;
+        background-color: #010819;
+        padding: 10px;
+        z-index: 999;
+}
+    /* Adjustments for mobile menu */
+    .nav-item {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .nav-item a {
+        color: white;
+    }
+
+    .category {
+        gap: 10px;
+    }
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 5px;
+    }
+    
+    .logo h1 {
+        margin: 0px;
+    }
+    .footer-content {
+        display: block;
+        padding: 0 20px;
+    }  
+    .footer-social {
+        margin: 10px;
+    }
+    .copyright {
+        font-size: x-small;
+    }
+  }
+
+  
+  /* Mobile Phones (Landscape) */
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .logo {
+        font-size:16px ;
+    }
+    .footer-links a {
+        margin-right: 10px;
+    }
+    .copyright {
+        font-size: 6px;
+    }
+}
+  
